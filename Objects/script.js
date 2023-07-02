@@ -296,7 +296,18 @@ const totalCredits = facultyOfArts.departments
 console.log(totalCredits)
 
 // Q4: Using the reduce method, find the student with the highest average grade across all courses.
+const allStudents = myObj.university.faculties
+    .flatMap(faculty => faculty.departments)
+    .flatMap(department => department.courses)
+    .flatMap(course => course.students);
 
+const studentWithHighestAverageGrade = allStudents.reduce((studentWithHighestAverageGrade, student) => {
+  const avgGrade = student.grades.reduce((total, grade) => total + grade, 0) / student.grades.length;
+  if (!studentWithHighestAverageGrade || avgGrade > studentWithHighestAverageGrade.avgGrade) {
+    return { ...student, avgGrade };
+  }
+  return studentWithHighestAverageGrade;
+}, null);
 
 
 // Q5: Using the filter method, create an array of students who have obtained a grade higher than 94 in any course.
@@ -311,3 +322,10 @@ console.log(studentsWithHighGrades)
 
 
 // Q6: Using the filter method, generate an array of courses in the Faculty of Science that have more than 2 credits.
+
+const facultyOfScience1 = myObj.university.faculties.find(faculty => faculty.name === "Faculty of Science");
+const coursesWithMoreThan2Credits = facultyOfScience1.departments
+    .flatMap(department => department.courses)
+    .filter(course => course.credits > 2);
+
+console.log(coursesWithMoreThan2Credits);
