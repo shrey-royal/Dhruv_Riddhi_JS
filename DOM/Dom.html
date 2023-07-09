@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script>
+        // document.write("Hello World");
+        // document.write("<h1>Hello World</h1>");
+    </script>
+</head>
+<body>
+    <!-- <p id="p"></p>
+    <h1 id="p1"></h1>
+    <div class="dhruvbhai"></div> -->
+<script>
+    // document.getElementById("p1").innerHTML = "Hello World";
+    // document.body.innerText = "Hello World from another world";
+    // document.scripts[0].innerText = "Hello World from another world in script tag";
+    const newElement = document.createElement('div');
+        
+    newElement.id = "d_id";
+    newElement.textContent = "This is dynamic div";
+    document.body.appendChild(newElement);
+</script>
+</body>
+</html>
