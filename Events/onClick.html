@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event - onClick</title>
+    <style>
+        p {
+            color: blue;
+            font-size: 20px;
+            cursor: pointer;
+            border: 1px solid orangered;
+        }
+
+        div {
+            border: 1px solid black;
+            height: 100px;
+            width: 200px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body onresize="console.log('Window resized!!!')">
+    <p onclick="this.innerHTML = 'onclick event handled'">click here</p>
+
+    <p onclick="changeColor(this)">Click here to change color of the text</p>
+
+    <button onclick="displayDate()">Date?</button>
+    <span id="date"></span>
+
+    <p ondblclick="this.innerHTML = 'dblclicked'">double click her</p>
+
+    <p onmousedown="this.innerHTML = 'mousedown triggered'">onmousedown</p>
+
+    <p onmouseenter="this.innerHTML = 'mouseenter triggered'">onmouseenter</p>
+
+    <p onmouseleave="this.innerHTML = 'mouseleave triggered'">onmouseleave</p>
+
+    <p onmousemove="this.innerHTML = 'mousemove triggered'">onmousemove</p>
+
+    <p onmouseover="this.innerHTML = 'mouseover triggered'">onmouseover</p>
+
+    <p onmouseout="this.innerHTML = 'mouseout triggered'">onmouseout</p>
+
+    <input type="text" onkeydown="null" placeholder="onkeydown"/><br><br>
+
+    <input type="text" onkeypress="null" placeholder="onkeypress"/><br><br>
+    
+    <input type="text" onkeyup="null" placeholder="onkeyup"/><br><br>
+
+    <input type="text" onfocus="displayMsg()" placeholder="onfocus"/><br><br>
+
+    <input type="text" onblur="this.value = 'onblur triggered'" placeholder="onblur"/><br><br>
+    
+    <input type="text" onchange="this.value = 'onchange triggered'" placeholder="onchange"/><br><br>
+    <span id="displayMsg"></span>
+
+    <form onsubmit="console.log('Form Submitted!')"><input type="submit"></form><br><br>
+
+    <img src="./image.jpg" style="width: 500px; height: 300px;" onload="imgLoaded(this)">
+    <span id="imgload"></span>
+
+    <!-- <body onunload="console.log('Page not loaded')"></body> -->
+
+    <div onscroll="scrollfn()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorum delectus totam vitae aut! Facilis eligendi magnam tenetur! Perspiciatis velit, ex accusantium facilis possimus voluptate mollitia aliquam debitis earum consequuntur dolores voluptates nihil? Quasi dicta veniam labore culpa blanditiis nisi consequuntur quae repellendus fugiat sunt nihil, magni, minima ea repudiandae.</div>
+    <p id="demo"></p>
+
+    <script>
+        function changeColor(element) {
+            element.style.color = "red";
+            element.style.fontSize = "40px";
+        }
+
+        function displayDate() {
+            // element.innerHTML = Date();
+            document.getElementById("date").innerHTML = Date();
+        }
+
+        function displayMsg() {
+            document.getElementById("displayMsg").innerHTML = "onfocus triggered";
+        }
+
+        function imgLoaded(element) {
+            document.getElementById("imgload").innerHTML = "Image loaded";
+
+            element.style.border = "3px solid orangered";
+        }
+
+        function scrollfn() {
+            document.getElementById("demo").innerHTML = "Scrolling...";
+        }
+    </script>
+</body>
+</html>

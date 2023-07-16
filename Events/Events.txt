@@ -1,0 +1,22 @@
+List of commonly used events in HTML:
+
+- `click`: Triggered when an element is clicked.
+- `dblclick`: Triggered when an element is double-clicked.
+- `mousedown`: Triggered when a mouse button is pressed down on an element.
+- `mouseup`: Triggered when a mouse button is released on an element.
+- `mousemove`: Triggered when the mouse pointer is moved over an element.
+- `mouseover`: Triggered when the mouse pointer enters an element.
+- `mouseout`: Triggered when the mouse pointer leaves an element.
+- `keydown`: Triggered when a key is pressed down.
+- `keyup`: Triggered when a key is released.
+- `keypress`: Triggered when a key is pressed and released.
+- `focus`: Triggered when an element receives focus.
+- `blur`: Triggered when an element loses focus.
+- `change`: Triggered when the value of an input element changes and loses focus.
+- `input`: Triggered when the value of an input element changes.
+- `submit`: Triggered when a form is submitted.
+- `reset`: Triggered when a form is reset.
+- `load`: Triggered when a resource (such as an image or a script) finishes loading.
+- `unload`: Triggered when a resource and its dependent resources are about to be unloaded.
+- `scroll`: Triggered when an element's scrollbar is scrolled.
+- `resize`: Triggered when the size of the browser window or an element is changed.
