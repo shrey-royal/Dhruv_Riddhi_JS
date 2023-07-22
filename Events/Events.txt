@@ -20,3 +20,47 @@ List of commonly used events in HTML:
 - `unload`: Triggered when a resource and its dependent resources are about to be unloaded.
 - `scroll`: Triggered when an element's scrollbar is scrolled.
 - `resize`: Triggered when the size of the browser window or an element is changed.
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+Tasks:
+
+1. Click Event:
+   - Display an alert when a button is clicked.
+   - Change the background color of an element when it's clicked.
+   - Show/hide content when clicking on a specific element.
+
+2. Submit Event:
+   - Validate a form when the user submits it.
+   - Display a success message when a form is successfully submitted.
+   - Prevent the default form submission behavior and handle it programmatically.
+
+3. Mouseover/Mouseout Events:
+   - Create a hover effect to highlight an element when the mouse cursor is over it.
+   - Display additional information when hovering over an image or text.
+
+4. Keydown/Keypress/Keyup Events:
+   - Build an interactive keyboard that responds to key presses.
+   - Capture user input in a text field and perform an action based on the input.
+
+5. Scroll Event:
+   - Implement a "scroll to top" button that appears when the user scrolls down and disappears when they're at the top of the page.
+   - Load additional content as the user scrolls down a page (infinite scrolling).
+
+6. Resize Event:
+   - Adjust the layout and design of elements dynamically based on the window size.
+   - Implement responsive design behavior when the browser window is resized.
+
+7. Focus/Blur Events:
+   - Validate form input fields when they lose focus (on blur).
+   - Show a tooltip or help text when an input field gains focus.
+
+8. Load Event:
+   - Perform actions once the page or specific elements have finished loading.
+   - Display a loading spinner until the content is fully loaded.
+
+9. Custom Events:
+   - Create and dispatch custom events to trigger specific actions across the application.
+   - Implement communication between different components of a web page.
