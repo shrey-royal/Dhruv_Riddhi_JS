@@ -1,0 +1,19 @@
+HTTP Protocol:
+
+> It is used to transfer data between client and server in the World Wide Web (WWW). HTTP is an application layer protocol designed within the framework of the Internet protocol suite. Its definition presumes an underlying and reliable transport layer protocol, and Transmission Control Protocol (TCP) is commonly used.
+
+> Status Codes: HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes:
+
+1xx informational response – the request was received, continuing process
+2xx successful – the request was successfully received, understood, and accepted
+3xx redirection – further action needs to be taken in order to complete the request
+4xx client error – the request contains bad syntax or cannot be fulfilled
+5xx server error – the server failed to fulfil an apparently valid request
+
+> In Short:
+
+100–199 denotes an informational response.
+200–299 denotes a successful request.
+300–399 denotes redirection.
+400–499 denotes client error.
+500–599 denotes server error.

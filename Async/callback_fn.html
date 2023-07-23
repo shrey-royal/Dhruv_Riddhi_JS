@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Fn</title>
+</head>
+<body>
+    
+    <script>
+        // function greet(name, callback) {
+        //     console.log('Hi' + ' ' + name);
+        //     callback();
+        // }
+
+        // // callback function
+        // function callMe() {
+        //     console.log('I am callback function');
+        // }
+
+        // // passing function as an argument
+        // greet('John', callMe);
+
+
+        function f1(callback) {
+            document.write('Hello World');
+            callback();
+        }
+
+        function f2() {
+            document.write('<br>I am callback function');
+        }
+
+        f1(f2);
+    </script>
+</body>
+</html>
