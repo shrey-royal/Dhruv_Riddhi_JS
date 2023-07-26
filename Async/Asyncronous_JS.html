@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous JS</title>
+</head>
+<body>
+    <script>
+        console.log("Start");
+
+        setTimeout(() => {
+            console.log("We are in the timeout");
+        }, 2000);
+
+        console.log("End");
+    </script>
+</body>
+</html>
+
+<!-- 
+Aynchronous JS
+    - JS is single threaded
+    - JS is synchronous
+    - JS can be non-blocking
+    - JS can be asynchronous
+
+Example: 
+    - setTimeout()
+    - XMLHttpRequest()
+    - <script async>
+    - <script defer>
+
+
+here setTimeout() is a function which takes two arguments, first is a function and second is time in milliseconds. 
+
+
+Tasks: 
+
+Function 1: It will add 4 numbers
+Function 2: added number will be multiplied by 2
+Function 3: multiplied number will be checked if it is divisible by 10 or not
+You can use setTimeout() to make it asynchronous
+
+ -->
