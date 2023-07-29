@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Wait</title>
+</head>
+<body>
+    aync and wait make promises easier to write
+    
+    <p id="result"></p>
+    
+    <script>
+        async function myDisplay() {
+            let myPromise = new Promise(function(myResolve, myReject) {
+                // myResolve("Resolved");
+                // myReject("Rejected");
+
+                setTimeout(function() { myReject("Rejected") }, 3000);
+            });
+            document.getElementById("result").innerHTML = await myPromise;
+        }
+
+        myDisplay();
+    </script>
+</body>
+</html>
+
+<!-- 
+await can only be used inside an async function.
+
+it will wait for the promise to resolve or reject before continuing then it will return the result.
+
+
+async means that the function will always return a promise.
+> if the code has return <non-promise> then JavaScript automatically wraps it into a resolved promise with that value.
+> if the code has return promise then JavaScript waits until that promise settles and returns its result.
+
+Real-world Example of async/wait: Youtube video
+> https://www.youtube.com/watch?v=vn3tm0quoqE
+
+Now we can use async/await with fetch to get data from an API and display it in the browser.
+
+But If the data is not available, the browser will display an error.
+
+What is the use async/await if it will display an error?
+> aysnc/await is used to make the code look synchronous but it is still asynchronous.
+-->

@@ -17,3 +17,31 @@ HTTP Protocol:
 300–399 denotes redirection.
 400–499 denotes client error.
 500–599 denotes server error.
+
+
+In JavaScript we can make HTTP requests using below given methods:
+
+1. XMLHttpRequest Object: This is a built-in object in js that allows you to send HTTP requests from your script. It has been around for a long time and is supported by all browsers. It is a bit difficult to use and the code is not very readable.
+
+2. fetch() function: This is a newer way to make HTTP requests that are built into modern browsers. It uses promises to handle the response and any errors that may occur.
+
+3. Third-party libraries: There are many libraries available that provide additional features and functionality for making HTTP requests in JavaScript. Some examples include Axios, SuperAgent, and jQuery. These libraries can make it easier to send complex requests and handle different types of responses.
+
+4. Server-side libraries: If you’re running your JavaScript code on the server (e.g., with Node.js), you can use libraries like request, superagent, or Axios to make HTTP requests. These libraries work in a similar way to the client-side libraries, but they can be used on the server to make requests to external APIs or servers.
+
+
+Third-party libraries examples: Axios, SuperAgent, and jQuery
+
+
+Protocol Meanings: 
+
+1. HTTP: GET, POST, PUT, DELETE, PATCH
+    a. GET: The GET method requests a representation of the specified resource. Requests using GET should only retrieve data. (read)
+
+    b. POST: The POST method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server. (create)
+
+    c. PUT: The PUT method replaces all current representations of the target resource with the request payload. (update)
+
+    d. DELETE: The DELETE method deletes the specified resource. (delete)
+
+    e. PATCH: The PATCH method is used to apply partial modifications to a resource. (update-old)
