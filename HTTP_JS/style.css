@@ -1,5 +1,15 @@
-p {
-    border: 1px solid red;
+body {
+    background-color: #000000;
+    /* background: linear-gradient(to right, #000000, #434343); */
+    color: whitesmoke;
+}
+
+div {
+    border: 2px solid mediumspringgreen;
     border-radius: 20px;
     padding: 10px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+
+    /* Background will be a linear gradient with 3 specified colors */
+    background: linear-gradient(to right, #000000, #434343);
 }
