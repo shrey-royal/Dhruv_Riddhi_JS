@@ -28,18 +28,30 @@
 //     xhr.send();
 // }
 
-function getData() {    //fetch() returns a promise
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(response => { //this is to check if the response is ok
-            if(!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
+// function getData() {    //fetch() returns a promise
+//     fetch('https://jsonplaceholder.typicode.com/posts')
+//         .then(response => { //this is to check if the response is ok
+//             if(!response.ok) {
+//                 throw new Error('Network response was not ok');
+//             }
+//             return response.json();
+//         })
+//         .then(data => {
+//             //Update the data container with the retrieved data
+//             var dataContainer = document.getElementById('data-container');
+//             dataContainer.innerHTML = JSON.stringify(data, null, 2);
+//         })
+//         .catch(error => {
+//             console.error('There has been a problem with your fetch operation: ', error);
+//         });
+// }
+
+function getData() {
+    axios.get('https://jsonplaceholder.typicode.com/posts/1')
+        .then(response => {
             //Update the data container with the retrieved data
             var dataContainer = document.getElementById('data-container');
-            dataContainer.innerHTML = JSON.stringify(data, null, 2);
+            dataContainer.innerHTML = JSON.stringify(response.data, null, 2);
         })
         .catch(error => {
             console.error('There has been a problem with your fetch operation: ', error);

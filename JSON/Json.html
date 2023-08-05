@@ -1,0 +1,93 @@
+<!-- 
+Json is a data format that is used to transfer data between a server and a client. 
+JSON stands for JavaScript Object Notation.
+It is a text format that is language independent and can be used in Python, Perl among other languages.
+It is a lightweight data format that is easy for humans to read and write.
+It is easy for machines to parse(convert) and generate.
+It is based on a subset of the JavaScript Programming Language.
+syntax:
+{
+    "name": "John",
+    "age": 22,
+    "city": "New York"
+}
+
+JSON is built on two structures:
+1. A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.
+
+2. An ordered list of values. In most languages, this is realized as an array, vector, list, or sequence.
+
+ex:
+{
+    "name": ["John", "Smith"],
+    "age": 22,
+    "city": "New York"
+}
+
+nested json object:
+
+{
+    "name": {
+        "first": "John",
+        "last": "Smith"
+    },
+    "age": 22,
+    "city": "New York"
+}
+
+JSON values can be:
+
+1. A number (integer or floating point)
+2. A string (in double quotes)
+3. A Boolean (true or false)
+4. An array (in square brackets)
+5. An object (in curly braces)
+6. null
+
+{
+"employees":[
+  {"firstName":"John", "lastName":"Doe"},
+  {"firstName":"Anna", "lastName":"Smith"},
+  {"firstName":"Peter", "lastName":"Jones"}
+]}
+
+JSON Built-in Methods:
+1. JSON.parse() - convert a string into a JavaScript object
+2. JSON.stringify() - convert a JavaScript object into a string
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <script>
+        var users = prompt("Enter the number of users you want to see: ");
+        console.log(users); 
+    </script>
+</head>
+<body>
+    <h1>JSON</h1>
+    <p id="demo"></p>
+    <script>
+        // var text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+        // var obj = JSON.parse(text);
+        // document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;
+
+        // var obj = { name: "John", age: 30, city: "New York" };
+        // var myJSON = JSON.stringify(obj);
+        // document.getElementById("demo").innerHTML = myJSON;
+
+        fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(response => response.json())
+        .then(json => {
+            console.log(json);
+            var obj = JSON.stringify(json);
+            document.getElementById("demo").innerHTML = obj;
+        })
+        .catch(err => console.log(err));
+    </script>
+</body>
+</html>
