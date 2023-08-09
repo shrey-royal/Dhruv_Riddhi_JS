@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    
+</head>
+<style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+    }
+
+    table,tr,td{
+        border: 2px solid white;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+<body>
+    <table id="table" align="center">
+        <thead>
+            <tr>
+                <td>User_id</td>
+                <td>Id</td>
+                <td>Title</td>
+                <td>Completed</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Data will be displayed here... -->
+        </tbody>
+        
+        
+    </table>
+
+    <script>
+        m = 1;
+        // var totalUser = +prompt('Enter total Number of User : ');
+        var totalUser = 10;
+        var arr = [];
+        for(var i=1; i<=totalUser; i++) {
+            fetch("https://jsonplaceholder.typicode.com/todos/" + i)
+                .then(response => response.json())
+                .then(json => {
+                    // console.log(json);
+                    var table = document.getElementById('table').getElementsByTagName('tbody')[0];
+
+                    var tr = document.createElement('tr');
+                    var td = [];
+                    for(var j=0; j<4; j++){
+                        td[j] = document.createElement('td');
+                    }
+
+                    arr[i-1] = json.userId;
+                    td[0].innerHTML = json.userId;
+                    td[1].innerHTML = json.id;
+                    td[2].innerHTML = json.title;
+                    td[3].innerHTML = json.completed;
+                    
+                    for(var j=0; j<4; j++){
+                      tr.appendChild(td[j]);
+                    }
+                    table.appendChild(tr);
+                    
+                }).catch(err => {
+                    console.log(err);
+                })
+        }
+        
+    </script>
+    </body>
+</html>
